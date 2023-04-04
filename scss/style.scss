@@ -1,0 +1,1242 @@
+@import "variables.scss";
+@import "mixins.scss";
+@font-face {
+    font-family: Roboto;
+    src:url('../src/fonts/Roboto-Regular.ttf');
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Roboto;
+}
+
+.container{
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+@include link($color,$color,$color,$color);
+
+// ___________Header____________
+
+.header{
+    padding: 12px 0;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 50;
+    background: #fff;
+    &__container{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo{
+        width: 231px;
+        position: relative;
+        display: flex;
+    }
+
+    
+}
+
+.logo__img{
+    position: absolute;
+    &_first{
+        left: 0;
+    }
+
+    &_second{
+        right: 0;
+    }
+}
+
+.navigation{
+    width: 535px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include link($color,$color,$color,$color);
+    
+    &__link{
+        font-size: 15px;
+        text-transform: uppercase;
+    }
+}
+
+.prewiew{
+    background-image: url(../src/img/header-background.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 800px;
+    background-size: 100%;
+    position: relative;
+    background-color: #fff;
+    &__title{
+        color: #AEE8FB;
+        font-size: 126px;
+        width: 700px;
+        margin-top: auto;
+        position: absolute;
+        bottom: 90px;
+        margin: 0;
+    }
+
+}
+
+.benefits{
+    padding: 130px 0;
+
+    @include link($color,$color,$color,$color);
+
+    &__container{
+
+    }
+
+    &__info{
+        width: 895px;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 44px;
+    }
+
+    &__button{
+        font-size: 14px;
+        width: 150px;
+        height: 43px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 44px;
+        border: 1px solid #000;
+        border-radius: 10px;
+        text-transform: uppercase;
+       
+    }
+}
+
+.provide{
+    padding: 60px 0;
+    background: $bgColor;
+    &__content{
+        font-size: 80px;
+    }
+}
+
+.programs{
+    padding: 120px 0;
+    &__title{
+        text-transform: uppercase;
+        margin-bottom: 35px;
+    }
+
+    &__container{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 360px;
+        padding: 26px;
+        border-radius: 10px;
+    }
+
+    &__item_first{
+        background: #AEE8FB;
+    }
+
+    &__item_second{
+        background: $bgColor;
+    }
+
+    &__item_third{
+        background: #AEE8FB;
+    }
+
+    &__media{
+        img{
+            border-radius: 10px;
+        }
+    }
+
+    &__suptitle{
+        text-transform: uppercase;
+        font-size: 16px;
+        margin: 0;
+        margin-top: 26px;
+    }
+
+    &__content{
+        font-size: 16px;
+        padding: 26px 0;
+        text-align: center;
+    }
+
+    &__button{
+        text-transform: uppercase;
+        padding: 13px;
+        display: flex;
+        border: 1px solid #000;
+        border-radius: 10px;
+    }
+}
+
+.help{
+    &__container{
+        display: flex;
+    }
+
+    &__media{
+        width: 50%;
+        img{
+            width: 100%;
+        }
+    }
+
+    &__content{
+        display: flex;
+        background: $bgColor;
+        width: 50%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__info{
+        font-size: 44px;
+        width: 362px;
+    }
+}
+
+.statistics{
+    padding: 120px 0;
+    &__title{
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 44px;
+    }
+
+    &__container{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 33.3%;
+        border-right: 1px solid #000;
+    }
+
+    &__item:last-child{
+        border: none;
+    }
+
+    &__number{
+        font-size: 61px;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    &__info{
+        font-size: 15px;
+        margin-top: 25px;
+        width: 185px;
+        text-align: center;
+    }
+}
+
+.run-line{
+    padding: 80px 0;
+    background: $bgColor;
+    &__content{
+        font-size: 80px;
+    }    
+}
+
+.proposition{
+    padding: 120px 0;
+    &__title{
+        margin-bottom: 25px;
+    }
+
+    &__container{
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    &__button{
+        text-transform: uppercase;
+        padding: 13px;
+        display: table;
+        border: 1px solid #000;
+        border-radius: 10px;
+        margin-left: auto;
+        margin-top: 20px;
+    }
+
+    &__item{
+        width: 30%;
+        padding: 36px;
+        
+        border-radius: 10px;
+    }
+
+    &__item_first{
+        background: #AEE8FB;
+        
+    }
+
+    &__item_second{
+        background: $bgColor;
+        color: #FF3B41;
+
+        @include link(#FF3B41,#FF3B41,#FF3B41,#FF3B41);
+        
+        .proposition__button{
+            border: 1px solid #FF3B41;
+        }
+    } 
+    
+    &__item_third{
+        background: #FF3B41;
+        color: #fff;
+        @include link(#fff,#fff,#fff,#fff);
+        
+        .proposition__button{
+            border: 1px solid #fff;
+        }
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 200px;
+    }
+
+    &__suptitle{
+        font-size: 58px;
+    }
+
+    &__info{
+        font-size: 15px;
+    }
+
+    
+}
+
+.information{
+    background: $bgColor;
+    padding: 65px;
+}
+
+.slider{
+    z-index: 9;
+    width: 700px;
+    
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    &__content{
+        width: 9999px; 
+    }
+
+    &__content,
+    &item{
+        
+    }
+
+    &__item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        float: left;
+        width: 700px;
+        height: 390px;
+
+    }
+
+    .nav{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        bottom: 0px; 
+        width: 48px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        span{
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            border: 1px solid;
+            cursor: pointer;
+            overflow: hidden;
+            display: block;
+            float: left;
+            background: none;
+        }
+        span.on {
+            background: #000;
+            width: 7px;
+            height: 7px;
+        }
+    }
+
+    &__title{
+        text-transform: uppercase;
+        margin-bottom: 60px;
+    }
+
+    &__text{
+        font-size: 44px;
+        width: 672px;
+        text-align: center;
+    }
+
+    &__autor{
+        text-transform: uppercase;
+        margin-top: 16px;
+    }
+}
+
+.service{
+    
+
+    &__background{
+        background-image: url(../src/img/proposition-background.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 720px;
+        background-size: 100%;
+    }
+
+    &__container{
+        padding: 120px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title{
+        font-size: 80px;
+        width: 714px;
+        text-align: center;
+    }
+
+    &__content{
+        font-size: 44px;
+        text-align: center;
+        width: 896px;
+        margin-top: 35px;
+        margin-bottom: 35px;
+    }
+
+    &__button{
+        text-transform: uppercase;
+        padding: 13px;
+        display: table;
+        border: 1px solid #000;
+        border-radius: 10px;
+    }
+}
+
+.footer{
+    background: $bgColor;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    &__container{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__quote{
+        text-transform: uppercase;
+    }
+
+    &__info{
+        width: 350px;
+    }
+
+    &__copyright{
+        text-align: right;
+        font-size: 15px;
+        margin-top: 250px;
+    }
+
+    &__suptitle{
+        text-transform: uppercase;
+        margin-bottom: 50px;
+    }
+
+    &__list{
+        
+    }
+
+    &__link{
+        display: block;
+        font-size: 15px;
+        margin-bottom: 2px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .container{
+        max-width: 960px;
+    }
+
+    .prewiew{
+        height: 622px;
+
+        &__title{
+            font-size: 100px;
+        }
+    }
+
+    .provide{
+        &__content{
+            font-size: 71px;
+        }
+    }
+    
+    .programs{
+        padding: 80px 0;
+        &__item{
+            width: 310px;
+        }
+
+        &__media{
+            width: 220px;
+
+            img{
+                width: 100%;
+            }
+        }
+    }
+
+    .statistics{
+        padding: 80px 0;
+    }
+
+    .run-line{
+        padding: 60px 0;
+    }
+
+    .proposition{
+
+        &__suptitle{
+            font-size: 44px;
+        }
+    }
+
+    .service{
+        &__background{
+            height: 560px;
+        }
+
+        &__container{
+            padding: 80px 0;
+        }
+    }
+
+    .footer{
+        &__copyright{
+            margin-top: 100px;
+        }
+    }
+}
+
+@media screen and (max-width: 996px) {
+
+    .container{
+        max-width: 660px;
+    }
+
+    .header{
+        
+    }
+
+    .logo{
+        width: 174px;
+        img{
+            height: 40px;
+        }
+    }
+
+    .navigation{
+        width: 433px;
+        &__link{
+            font-size: 13px;
+        }
+    }
+
+    .prewiew{
+        height: 438px;
+
+        &__title{
+            font-size: 70px;
+            width: 500px;
+        }
+    }
+
+    .benefits{
+        padding: 70px 0;
+        &__info{
+            width: auto;
+        }
+    }
+
+    .provide{
+        &__content{
+            font-size: 45px;
+        }
+    }
+    
+    .programs{
+        padding: 60px 0;
+        &__item{
+            width: 211px;
+            padding: 14px;
+        }
+
+        &__media{
+            width: 164px;
+
+        }
+
+        &__content{
+            font-size: 13px;
+        }
+    }
+
+    .help{
+        &__info{
+            font-size: 28px;
+            width: 100%;
+            padding: 0 20px;
+        }
+    }
+
+    .statistics{
+        padding: 80px 0;
+
+        &__number{
+            font-size: 48px;
+        }
+
+        
+    }
+
+    .run-line{
+        padding: 40px 0;
+
+        &__content{
+            font-size: 42px;
+        }
+    }
+
+    .proposition{
+
+
+        &__item{
+            width: 211px;
+        }
+
+        &__suptitle{
+            font-size: 29px;
+        }
+
+        &__info {
+            font-size: 14px;
+        }
+
+        &__content{
+            height: 230px;
+        }
+
+        &__button{
+            padding: 10px;
+        }
+    }
+
+    .slider,
+    .slider__item,
+    .slider__text{
+        width: 580px;    
+    }
+
+    .slider{
+
+        &__content{
+            margin-left: -580px;
+        }
+
+        &__item{
+            height: 430px;
+        }
+    }
+
+    .service{
+        &__background{
+            height: 449px;
+        }
+
+        &__title{
+            width: 100%;
+            font-size: 60px;
+        }
+
+        &__content{
+            width: 100%;
+            font-size: 28px;
+        }
+
+        &__container{
+            padding: 80px 0;
+        }
+
+        &__button{
+            padding: 10px;
+        }
+    }
+
+    .footer{
+        &__copyright{
+            margin-top: 100px;
+        }
+
+        &__info{
+            width: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .container{
+        max-width: 460px;
+    }
+
+    .header{
+        &__container{
+            align-items: center;
+        }
+        
+    }
+
+    .logo{
+        width: 174px;
+        z-index: 51;
+        img{
+            height: 40px;
+        }
+    }
+
+    .navigation{
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -117%;
+        width: 100%;
+        height: 100%;
+        background: $bgColor;
+        padding: 100px 30px 30px 30px;
+        transition: left 0.3s ease 0s;
+
+        &::before{
+            content: " ";
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            height: 64px;
+            background-color: #fff;
+            
+        }
+
+        &__link,
+        &__link:visited{
+            display: block;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #fff;
+        }
+    }
+
+    .navigation._active{
+        left: 0;
+    }
+
+    .menu__icon{
+        display: block;
+        z-index: 5;
+        position: relative;
+        width: 38px;
+        height: 26px;
+        cursor: pointer;
+
+        &::before,
+        &::after,
+        span{
+            left: 0;
+            position: absolute;
+            height: 12%;
+            width: 100%;
+            transition: all 0.3s ease 0s;
+            background-color: #000;
+        }
+
+        &::before,
+        &::after{
+            content: "";
+        }
+
+        &::before{
+            top: 0;
+        }
+
+        &::after{
+            bottom: 0;
+        }
+
+        span{
+            top: 50%;
+            transform: scale(1) translate(0px, -50%);
+        }
+
+    }
+
+    .menu__icon._active{
+        span{
+            transform: scale(0) translate(0px, -50%);
+        }
+
+        &::before{
+            top: 50%;
+            transform: rotate(-45deg) translate(0px, -50%);
+        }
+
+        &::after{
+            bottom: 50%;
+            transform: rotate(45deg) translate(0px, 50%);
+        }
+    }
+
+    .prewiew{
+        height: 317px;
+        margin-top: 64px;
+        &__title{
+            font-size: 50px;
+            width: 335px;
+            bottom: 50px;
+        }
+    }
+
+    .benefits{
+        padding: 70px 0;
+        &__info{
+        font-size: 25px;
+        }
+
+        &__button{
+            margin-top: 20px;
+        }
+    }
+
+    .provide{
+        &__content{
+            font-size: 32px;
+        }
+    }
+    
+    .programs{
+        padding: 60px 0;
+
+        &__container{
+            flex-wrap: wrap;
+        }
+
+        &__item{
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .help{
+        &__info{
+            font-size: 18px;
+        }
+    }
+
+    .statistics{
+        padding: 80px 0;
+
+        &__number{
+            font-size: 34px;
+        }
+
+        &__info{
+            font-size: 12px;
+            width: 134px;
+            
+        }
+    }
+
+    .run-line{
+        padding: 40px 0;
+
+        &__content{
+            font-size: 24px;
+        }
+    }
+
+    .proposition{
+        padding: 50px 0;
+
+        &__container{
+            flex-wrap: wrap;
+        }
+
+        &__item{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        &__suptitle{
+            font-size: 29px;
+        }
+
+        &__info {
+            font-size: 14px;
+        }
+
+        &__content{
+            height: 130px;
+        }
+
+        &__button{
+            padding: 10px;
+        }
+    }
+
+    .slider,
+    .slider__item,
+    .slider__text{
+        width: 320px;    
+    }
+
+    .slider{
+
+        &__content{
+            margin-left: -320px;
+        }
+
+        &__item{
+            height: 330px;
+        }
+
+        &__text{
+            font-size: 25px;
+        }
+    }
+
+    .service{
+
+        &__background{
+            height: 276px;
+            width: 100%;
+            background-size: 100%;
+        }
+
+        &__title{
+            font-size: 34px;
+        }
+
+        &__content{
+            width: 100%;
+            font-size: 21px;
+        }
+
+        &__container{
+            padding: 50px 0;
+        }
+
+        &__button{
+            padding: 10px;
+        }
+    }
+
+    .footer{
+        padding: 40px 0;
+        &__container{
+            display: block;
+            
+        }
+
+        &__copyright{
+
+            margin-top: 50px;
+        }
+
+        &__info{
+            margin-top: 30px;
+            width: auto;
+        }
+
+        &__suptitle{
+            margin-bottom: 20px;
+        }
+
+        &__list{
+            
+        }
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+
+    .container{
+        max-width: 100%;
+    }
+
+    .header{
+        padding-left: $mobilePadding;
+        padding-right: $mobilePadding;
+    }
+
+    .logo{
+        width: 200px;
+        img{
+            height: 30px;
+        }
+    }
+
+    .navigation{
+        &::before{
+            height: 54px;
+        }
+    }
+
+    .prewiew{
+        margin-top: 54px;
+        height: 200px;
+        padding-left: $mobilePadding;
+        padding-right: $mobilePadding;
+
+        &__title{
+            font-size: 27px;
+            width: 200px;
+            left: 25px;
+            bottom: 50px;
+        }
+    }
+
+    .benefits{
+        padding: 50px 0;
+        padding-left: $mobilePadding;
+        padding-right: $mobilePadding;
+        &__info{
+        font-size: 18px;
+        }
+
+        &__button{
+            margin-top: 20px;
+            font-size: 12px;
+            width: 118px;
+            height: 32px;
+        }
+    }
+
+    .provide{
+        padding: 40px 0;
+        padding-left: $mobilePadding;
+        padding-right: $mobilePadding;
+        &__content{
+            font-size: 24px;
+        }
+    }
+    
+    .programs{
+        padding: 40px 0;
+        padding-bottom: 20px;
+        padding-left: $mobilePadding;
+        padding-right: $mobilePadding;
+
+        &__button{
+            font-size: 12px;
+            padding: 8px;
+        }
+
+    }
+
+    .help{
+        padding-left: $mobilePadding;
+        padding-right: $mobilePadding;
+        &__info{
+            font-size: 14px;
+        }
+    }
+
+    .statistics{
+        
+        padding: 40px 0;
+        padding-bottom: 20px;
+
+        &__number{
+            font-size: 34px;
+        }
+
+        &__container{
+            flex-wrap: wrap;
+        }
+
+        &__item{
+            border-right: none;
+            width: 100%;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #000;
+        }
+
+        &__info{
+            font-size: 12px;
+            margin-top: 15px;
+        }
+    }
+
+    .run-line{
+        padding: 40px 0;
+
+        &__content{
+            font-size: 24px;
+        }
+    }
+
+    .proposition{
+        padding: 50px 0;
+        padding-left: $mobilePadding;
+        padding-right: $mobilePadding;
+
+        &__container{
+            flex-wrap: wrap;
+        }
+
+        &__item{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        &__suptitle{
+            font-size: 29px;
+        }
+
+        &__info {
+            font-size: 14px;
+        }
+
+        &__content{
+            height: 145px;
+        }
+
+        &__button{
+            padding: 10px;
+        }
+    }
+
+    .information{
+        padding: 0px 0;
+    }
+
+    .slider,
+    .slider__item,
+    .slider__text{
+        width: 280px;    
+    }
+
+    .slider{
+
+        &__content{
+            margin-left: -280px;
+        }
+
+        &__item{
+            height: 290px;
+        }
+
+        &__text{
+            font-size: 22px;
+        }
+    }
+
+    .service{
+
+        &__background{
+            height: 180px;
+        }
+
+        &__title{
+            font-size: 30px;
+        }
+
+        &__content{
+            width: 100%;
+            font-size: 18px;
+            margin: 25px auto;
+            
+        }
+
+        &__container{
+            padding: 50px 0;
+            padding-left: $mobilePadding;
+            padding-right: $mobilePadding;
+        }
+
+        &__button{
+            padding: 8px;
+            font-size: 12px;
+        }
+    }
+
+    .footer{
+        padding: 40px 0;
+        padding-left: $mobilePadding;
+        padding-right: $mobilePadding;
+        &__container{
+            display: block;
+            font-size: 14px;   
+        }
+
+        &__copyright{
+            margin-top: 50px;
+            font-size: 14px;
+        }
+
+        &__info{
+            margin-top: 30px;
+            width: auto;
+        }
+
+        &__suptitle{
+            margin-bottom: 20px;
+        }
+
+        &__link{
+            font-size: 13px;
+        }
+    }
+}
